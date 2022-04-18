@@ -2,9 +2,9 @@
 
 First of all, this is **NOT** a secure password manager, since key to decrypt everything on the database is stored as an environment variable on the backend server.
 
-This is a personal project in which I put all my effort to learn a lot of technologies, some new, and some not so much, like React Hooks, Typescript, Redux and its Hooks, and many more.
+This is a personal project in which I put all my effort to learn a lot of technologies, some new, and some not so much, like React Hooks, Typescript, Redux and it's Hooks, and many more.
 
-I always tried to follow standards.
+I always tried to follow the standards.
 
 This is basically the same project as [Web-Forntend](https://github.com/PasuSewa/Web-Frontend), but with ElectronJS on top of that, and with a few less functionalities (the payment system, and the captcha, for example).
 
@@ -23,10 +23,10 @@ First of all, you will need to properly set up the .env.local file. This project
 1. REACT_APP_ENV_LOCAL: If there is nothing, the app will asume that the environment is "production", else, if there is anything, the app will change to "local" / "development" environment.
    <br/>
    <br/>
-2. REACT_APP_USE_LOCAL_API: If empty, the app will call the production api, else, it will use http://localhost:8000/api (see src/misc/ajaxManajer.ts to change the base uri for both options).
+2. REACT_APP_USE_LOCAL_API: If empty, the app will call the production api, else, it will use http://localhost:8000/api (see src/hooks/useApi.ts to change the base uri for both options).
    <br/>
    <br/>
-   Once you are done with all of that, the last thing is to run
+   Once you are done with all of that, the last thing is to run the following:
 
     `npm install`
 
@@ -38,17 +38,17 @@ First of all, you will need to properly set up the .env.local file. This project
 
 ## Electron
 
-**Before anything, to run these commands you must have yarn already installed in your PC.**
+**Before anything, to run these commands you must have yarn already installed in your PC or Mac.**
 
-There are two commands that you wnat to know. First is how to run the project in the local environment:
+There are two commands that you wnat to know. The first one is how to run the project in the local environment:
 
 `npm run electron:serve`
 
-The other useful-to-know command is:
+And the other useful-to-know command is:
 
 `npm run electron:build`
 
-In order to create the installer file.
+Which is used to create the installer file for production.
 (It will create the installer required for the system you are in at the time of building).
 
 ---
@@ -61,7 +61,7 @@ Basically, all the components that don't require a unit test, and don't use styl
 
 Then, the components that do have a test, and / or use the Material-UI styles, are stored in a folder with the name of the component, and with the test named as `componentName.test.tsx`, and styles as `styles.ts`.
 
-And lastly, there are a few components that aren't used outside of 1 or 2 parent components, and those are stored inside of the folder of the parent component (for example the Drawer component, which is in src/comps/Navbar/Drawer since it isn't used outside of the navbar).
+And lastly, there are a few components that aren't used outside of their parent components, and those are stored inside of the folder of the parent component (for example the Drawer component, which is in src/components/Navbar/Drawer since it isn't used outside of the navbar).
 
 ---
 
